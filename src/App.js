@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const HW_config = {
+  selector: ".App-header", // CSS selector where to inject the badge
+  account:  "xGR4zy"
+}
+
 function App() {
+
+  useEffect(() => {
+    window.Headway.init(HW_config);
+  });
+  
   return (
     <div className="App">
       <header className="App-header">
